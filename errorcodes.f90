@@ -1,0 +1,28 @@
+# 1 "errorcodes.F90"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+# 1 "<command-line>" 2
+# 1 "errorcodes.F90"
+module errorcodes
+# 1 "errorcodes.h" 1
+# 3 "errorcodes.F90" 2
+  use :: iso_c_binding
+  implicit none
+
+INTEGER(C_INT),PARAMETER:: ERR_ALLOC_ERR = 100
+INTEGER(C_INT),PARAMETER:: ERR_FILE_ERR = 101
+
+INTEGER(C_INT),PARAMETER:: ERR_ATM_MISMTCH = 201
+INTEGER(C_INT),PARAMETER:: ERR_EGV_VOID = 202
+INTEGER(C_INT),PARAMETER:: ERR_EGV_MISMTCH = 203
+INTEGER(C_INT),PARAMETER:: ERR_MAT_UNALLOC = 204
+INTEGER(C_INT),PARAMETER:: ERR_MAT_NOTSQRE = 205
+
+INTEGER(C_INT),PARAMETER:: ERR_NN_LIST = 250
+
+INTEGER(C_INT),PARAMETER:: ERR_HAM_UNMAT = 301
+INTEGER(C_INT),PARAMETER:: ERR_HAM_UNPAIR = 304
+INTEGER(C_INT),PARAMETER:: ERR_HAM_ZEROLN = 305
+
+end module errorcodes
